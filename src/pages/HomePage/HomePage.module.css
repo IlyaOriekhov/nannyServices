@@ -1,0 +1,12 @@
+.homeContainer {
+  text-align: center;
+  padding: 2rem;
+}
+
+.getStartedButton {
+  padding: 1rem 2rem;
+  background-color: #0957c3;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}

@@ -1,0 +1,34 @@
+.nanniesPageContainer {
+  padding: 2rem;
+  text-align: center;
+}
+
+.nanniesPageTitle {
+  color: #0957c3;
+  margin-bottom: 1rem;
+}
+
+.nanniesPageAvatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.nanniesPageDetails {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.nanniesPageDetails p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.nannie-page-loading,
+.nanniesPageError {
+  font-size: 1.2rem;
+  color: #333;
+}
