@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Header from "../../components/Header/Header";
 import css from "./NotFoundPage.module.css";
 
 const NotFoundPage = () => {
