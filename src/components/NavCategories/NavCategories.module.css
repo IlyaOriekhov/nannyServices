@@ -1,0 +1,39 @@
+.linkBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.linkBoxColumn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.navigationLink {
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  text-decoration: none;
+  position: relative;
+}
+
+.navigationLink.active::after {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  bottom: -14px;
+  right: 50%;
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .linkBox,
+  .linkBoxColumn {
+    gap: 40px;
+  }
+}

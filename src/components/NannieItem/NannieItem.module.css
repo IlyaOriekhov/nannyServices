@@ -1,0 +1,183 @@
+.listItem {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 22px;
+  max-width: 1184px;
+  border-radius: 24px;
+  background-color: var(--light-white);
+  padding: 24px;
+}
+
+.imageWrapper {
+  border: 2px solid var(--main-background);
+  border-radius: 30px;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapper > img {
+  border-radius: 15px;
+  width: 96px;
+  height: 96px;
+}
+
+.imageWrapper > svg {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+.nanieContacts {
+  display: grid;
+  grid-template-columns: auto;
+  margin-bottom: 16px;
+}
+
+.locationRatingPriceBox {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.locationRatingPriceContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #11101c;
+}
+
+.priceSpan {
+  color: #38cd3e;
+}
+
+.position {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #8a8a89;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.featuresList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.textAbout {
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(17, 16, 28, 0.5);
+  margin-bottom: 12px;
+}
+
+.buttonReadMore {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--text-main);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.buttonOpenModal {
+  border-radius: 30px;
+  padding: 14px 28px;
+  border: none;
+  background-color: var(--main-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--light-white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttonCollapse {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--text-main);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.buttonCollapse:hover {
+  color: var(--main-color);
+}
+
+.buttonLikeStyled {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .listItem {
+    grid-template-columns: auto auto;
+  }
+
+  .locationRatingPriceBox {
+    gap: 32px;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .nanieContacts {
+    grid-template-columns: auto auto;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 26px;
+  }
+
+  .name {
+    margin-bottom: 0;
+  }
+
+  .locationRatingPriceBox {
+    margin-right: 70px;
+  }
+
+  .locationRatingPriceContent:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -16px;
+    width: 1px;
+    background-color: rgba(17, 16, 28, 0.2);
+  }
+}

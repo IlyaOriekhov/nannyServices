@@ -1,0 +1,45 @@
+.addInfoWrapper {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  border-radius: 20px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  background-color: #fbfbfb;
+  gap: 16px;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.svgBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  border-radius: 13px;
+  width: 54px;
+  height: 54px;
+}
+
+.svgBox svg {
+  fill: #fbfbfb;
+}
+
+.addInfoTitle {
+  font-size: 16px;
+  color: rgba(17, 16, 28, 0.3);
+  margin-bottom: 4px;
+}
+
+.addInfoNumber {
+  font-weight: 700;
+  font-size: 24px;
+  color: #11101c;
+}
+
+@media screen and (max-width: 768px) {
+  .addInfoWrapper {
+    display: none;
+  }
+}

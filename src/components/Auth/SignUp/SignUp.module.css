@@ -1,0 +1,93 @@
+.container {
+  padding: 44px 24px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #11101c;
+  margin-bottom: 20px;
+}
+
+.textDescription {
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(17, 16, 28, 0.5);
+  margin-bottom: 40px;
+}
+
+.formFields {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.fieldInput {
+  border: 1px solid rgba(17, 16, 28, 0.1);
+  border-radius: 12px;
+  padding: 16px 18px 16px 18px;
+  width: 100%;
+}
+
+.fieldInput::placeholder {
+  font-size: 16px;
+  line-height: 125%;
+  color: #11101c;
+}
+
+.button {
+  margin-top: 40px;
+  border-radius: 30px;
+  border-color: transparent;
+  padding: 16px;
+  background-color: var(--second-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--main-color);
+  background-color: #fbfbfb;
+  border-color: var(--main-color);
+}
+
+.label {
+  position: relative;
+}
+
+.errorText {
+  position: absolute;
+  color: var(--main-color);
+  font-size: 12px;
+  left: 6px;
+}
+
+.iconEye {
+  stroke-width: 2px;
+  stroke: #11101c;
+  fill: transparent;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 44px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 64px;
+  }
+}

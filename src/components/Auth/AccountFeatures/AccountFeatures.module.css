@@ -1,0 +1,124 @@
+.wrapper {
+  display: flex;
+  gap: 25px;
+  flex-direction: row;
+}
+
+.wrapperColumn {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.btnLogOut {
+  background-color: transparent;
+  border: 1px solid rgba(251, 251, 251, 0.4);
+  border-radius: 30px;
+  padding: 14px 39px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.btnLogOut:hover {
+  color: var(--main-color);
+  background-color: #fbfbfb;
+}
+
+.userBox {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.userAvatarField {
+  width: 40px;
+  height: 40px;
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  fill: var(--main-color);
+}
+
+.userName {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 111%;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+}
+
+.logInBtn {
+  border: 1px solid rgba(251, 251, 251, 0.4);
+  border-radius: 30px;
+  padding: 10px 20px;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.logInBtn:hover {
+  border: 1px solid #fbfbfb;
+}
+
+.btnBox {
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+}
+
+.btnBoxColumn {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.registerBtn {
+  border-color: transparent;
+  border-radius: 30px;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: #fbfbfb;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.registerBtn.homePathBtn {
+  background-color: var(--main-color);
+  color: #fbfbfb;
+}
+
+.registerBtn:hover {
+  color: var(--main-color);
+  background-color: #fbfbfb;
+}
+
+.registerBtn.homePathBtn:hover {
+  color: var(--main-color);
+  background-color: #fbfbfb;
+}
+
+@media screen and (min-width: 768px) {
+  .logInBtn,
+  .registerBtn {
+    padding: 14px 39px;
+  }
+}

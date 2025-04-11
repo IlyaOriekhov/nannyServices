@@ -1,0 +1,23 @@
+.buttonLikeWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.iconLike {
+  width: 26px;
+  height: 26px;
+  fill: transparent;
+  stroke: #101828;
+}
+
+.iconLike.liked {
+  fill: var(--main-color);
+  stroke: var(--main-color);
+}

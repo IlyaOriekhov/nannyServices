@@ -1,0 +1,49 @@
+/* src/components/Reviews/Reviews.module.css */
+.list {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  margin: 50px 0;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.avatar {
+  border-radius: 100px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  background-color: var(--main-background);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.reviewerInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.reviewerInfoText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #11101c;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.comment {
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(17, 16, 28, 0.5);
+}

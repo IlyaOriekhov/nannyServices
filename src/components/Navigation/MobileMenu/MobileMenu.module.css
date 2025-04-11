@@ -1,0 +1,64 @@
+.backdropMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.menuContainer {
+  z-index: 1001;
+  position: relative;
+  right: 0;
+  margin-left: auto;
+  height: 100vh;
+  background-color: rgba(17, 16, 28);
+  padding: 26px 32px 32px 32px;
+  overflow: hidden;
+}
+
+.iconClose {
+  stroke-width: 2px;
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+  stroke: white;
+}
+
+.closeBtn {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 26px;
+  right: 32px;
+  cursor: pointer;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  align-items: center;
+  transform: translateY(60%);
+}
+
+@media (max-width: 374px) {
+  .menuContainer {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .menuContainer {
+    width: 200px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .menuContainer {
+    width: 350px;
+  }
+}

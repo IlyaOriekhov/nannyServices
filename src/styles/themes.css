@@ -1,0 +1,35 @@
+:root {
+  /* Global Colors */
+  --light-white: #fbfbfb;
+  --white: #fff;
+  --not-active-select: rgba(17, 16, 28, 0.3);
+  --text-main: #11101c;
+  --text-secondary: rgba(17, 16, 28, 0.5);
+  --text-gray: #11101c;
+  --features-bg: #f3f3f3;
+  --border-light-gray: 1px solid rgba(17, 16, 28, 0.1);
+  --border-gray: 1px solid rgba(251, 251, 251, 0.4);
+  --yellow: #ffc531;
+  --green: #38cd3e;
+}
+
+/* Red Theme */
+.theme-red {
+  --main-color: #f03f3b;
+  --second-color: #f03f3b;
+  --main-background: rgba(240, 63, 59, 0.2);
+}
+
+/* Blue Theme */
+.theme-blue {
+  --main-color: #0957c3;
+  --second-color: #0957c3;
+  --main-background: rgba(9, 87, 195, 0.2);
+}
+
+/* Green Theme */
+.theme-green {
+  --main-color: #103931;
+  --second-color: #103931;
+  --main-background: rgba(16, 57, 49, 0.2);
+}

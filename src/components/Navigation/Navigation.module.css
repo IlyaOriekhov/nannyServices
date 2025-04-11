@@ -1,0 +1,46 @@
+.navWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 20px;
+}
+
+.homeNav {
+  background-color: transparent;
+}
+
+.solidNav {
+  background-color: var(--main-color);
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+  border-radius: 30px;
+  max-width: 1376px;
+  margin: 0 auto;
+  background-color: inherit;
+  backdrop-filter: blur(4px);
+}
+
+.leftGroup {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.centerGroup {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}

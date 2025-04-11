@@ -1,0 +1,32 @@
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1184px;
+}
+
+.button {
+  border-radius: 30px;
+  border: none;
+  padding: 14px 40px;
+  background-color: var(--second-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--light-white);
+  margin: 64px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  color: var(--main-color);
+  background-color: var(--light-white);
+  border: 1px solid var(--main-color);
+}

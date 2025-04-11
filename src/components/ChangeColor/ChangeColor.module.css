@@ -1,0 +1,21 @@
+.colorOptions {
+  display: flex;
+  gap: 8px;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.circle:hover {
+  border-color: #ddd;
+}
+
+.active {
+  border-color: #fff;
+}

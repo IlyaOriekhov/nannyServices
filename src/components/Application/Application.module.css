@@ -1,0 +1,203 @@
+.container {
+  padding: 64px 36px;
+  overflow-y: auto;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #11101c;
+  margin-bottom: 20px;
+}
+
+.textDescription {
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(17, 16, 28, 0.5);
+  margin-bottom: 40px;
+}
+
+.formFields {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.fieldInput {
+  border: 1px solid rgba(17, 16, 28, 0.1);
+  border-radius: 12px;
+  padding: 16px 18px;
+  width: 100%;
+}
+
+.contactField[type="number"]::-webkit-inner-spin-button,
+.contactField[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.contactField[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.fieldInput::placeholder {
+  font-size: 16px;
+  line-height: 125%;
+  color: #11101c;
+}
+
+.contactWrapper {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: auto;
+}
+
+.contactField {
+  border: 1px solid rgba(17, 16, 28, 0.1);
+  border-radius: 12px;
+  padding: 16px 18px;
+  width: 100%;
+}
+
+.contactField::placeholder {
+  font-size: 16px;
+  line-height: 125%;
+  color: #11101c;
+}
+
+.button {
+  margin-top: 32px;
+  border-radius: 30px;
+  border-color: transparent;
+  padding: 16px;
+  background-color: var(--second-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--main-color);
+  background-color: #fbfbfb;
+  border-color: var(--main-color);
+}
+
+.label {
+  position: relative;
+}
+
+.errorText {
+  position: absolute;
+  color: var(--main-color);
+  font-size: 12px;
+  left: 6px;
+}
+
+.nannieWrapper {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 42px;
+}
+
+.nannieWrapper > img {
+  border-radius: 15px;
+}
+
+.position {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 133%;
+  color: #8a8a89;
+  margin-bottom: 4px;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #11101c;
+}
+
+.comment {
+  border: 1px solid rgba(17, 16, 28, 0.1);
+  border-radius: 12px;
+  padding: 16px 18px;
+  width: 100%;
+  height: 116px;
+  resize: none;
+}
+
+.comment::placeholder {
+  font-size: 16px;
+  line-height: 125%;
+  color: #11101c;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 44px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 60px 64px;
+    overflow-y: hidden;
+  }
+
+  .contactWrapper {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 18px;
+    column-gap: 5px;
+  }
+
+  .contactField {
+    height: 52px;
+  }
+}
+
+.timePickerWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.clockIcon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  fill: #11101c;
+}
+
+.timePicker {
+  z-index: 1000;
+  width: 151px !important;
+}
+
+:global(.react-datepicker__time-list-item:nth-child(18)),
+:global(.react-datepicker__time-list-item:nth-child(19)),
+:global(.react-datepicker__time-list-item:nth-child(20)),
+:global(.react-datepicker__time-list-item:nth-child(21)) {
+  color: var(--main-color);
+}
+
+:global(.react-datepicker__time-list-item:not(:nth-child(22))) {
+  color: var(--main-color);
+}
+
+:global(.react-datepicker-popper) {
+  z-index: 9999;
+}
+
+:global(.react-datepicker-popper[data-placement^="bottom"]) {
+  margin-top: 10px;
+}

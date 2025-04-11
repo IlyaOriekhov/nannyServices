@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 90px auto;
+}
+
+.emptyMessage {
+  text-align: center;
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1184px;
+    padding: 0 132px;
+    margin: 150px auto 100px auto;
+  }
+}
