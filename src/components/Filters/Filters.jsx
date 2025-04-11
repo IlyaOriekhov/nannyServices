@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFilter } from "../../redux/filter/selectors";
 import { changeFilter } from "../../redux/filter/filterSlice";
@@ -10,13 +10,28 @@ export const Filters = () => {
   const filter = useSelector(selectFilter);
   const [showOptions, setShowOptions] = useState(false);
 
+  const filtersRef = useRef(null);
+
   const handleChange = (value) => {
     dispatch(changeFilter(value));
     setShowOptions(false);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (filtersRef.current && !filtersRef.current.contains(event.target)) {
+        setShowOptions(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className={styles.optionsContainer}>
+    <div className={styles.optionsContainer} ref={filtersRef}>
       <p className={styles.title}>Filters</p>
       <div
         className={styles.selector}
@@ -61,6 +76,14 @@ export const Filters = () => {
             onClick={() => handleChange("Greater than 10$")}
           >
             Greater than 10$
+          </div>
+          <div
+            className={`${styles.option} ${
+              filter === "Not Popular" ? styles.selected : ""
+            }`}
+            onClick={() => handleChange("Not Popular")}
+          >
+            Not Popular
           </div>
           <div
             className={`${styles.option} ${
