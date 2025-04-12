@@ -18,8 +18,12 @@ export const ButtonLike = ({ nannieName }) => {
   const [isLike, setIsLike] = useState(false);
 
   useEffect(() => {
-    setIsLike(favoriteNannies.includes(nannieName));
-  }, [favoriteNannies, nannieName]);
+    if (user) {
+      setIsLike(favoriteNannies.includes(nannieName));
+    } else {
+      setIsLike(false);
+    }
+  }, [favoriteNannies, nannieName, user]);
 
   const handleLike = () => {
     if (user) {

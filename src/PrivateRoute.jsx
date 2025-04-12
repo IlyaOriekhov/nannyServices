@@ -1,15 +1,30 @@
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import PropTypes from "prop-types";
-import { selectCurrentUser } from "./redux/auth/selectors";
+import { auth } from "./firebase";
 
 export const PrivateRoute = ({ component: Component, redirectTo = "/" }) => {
-  const currentUser = useSelector(selectCurrentUser);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  return !currentUser ? <Navigate to={redirectTo} /> : Component;
-};
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        setTimeout(() => {
+          const currentUser = auth.currentUser;
+          setUser(currentUser);
+          setLoading(false);
+        }, 500);
+      } catch (error) {
+        setLoading(false);
+      }
+    };
 
-PrivateRoute.propTypes = {
-  component: PropTypes.node.isRequired,
-  redirectTo: PropTypes.string,
+    checkAuth();
+  }, []);
+
+  if (loading) {
+    return;
+  }
+
+  return user ? Component : <Navigate to={redirectTo} />;
 };

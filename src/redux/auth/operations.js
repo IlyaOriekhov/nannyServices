@@ -47,6 +47,8 @@ export const logIn = createAsyncThunk(
 export const logOut = createAsyncThunk("auth/logOut", async (_, thunkAPI) => {
   try {
     signOut(auth);
+
+    window.location.href = "/";
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }
